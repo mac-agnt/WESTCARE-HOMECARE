@@ -2,13 +2,14 @@ import { Fragment } from "react";
 import { arr, css, cx, txt } from "../../runtime/template";
 import HomeThread from "./HomeThread";
 import HomeWidgetRail from "./HomeWidgetRail";
+import { HomeKpis, HomeOffices, HomeQueries, HomeRail } from "../../westcare/HomeBoard";
 
 type Props = { v: any };
 
 export default function Home({ v }: Props) {
   return (
     <>
-      <div style={{"position":"relative","display":"flex","gap":"20px","height":"100%","padding":"0 22px 22px"}}>
+      <div style={{"position":"relative","display":"flex","gap":"20px","height":v.heliosEmpty ? "auto" : "100%","minHeight":"100%","padding":"0 22px 22px"}}>
         <div style={css(v.homeCanvasStyle)} />
         <div style={css(v.chatColumnStyle)}>
           {v.heliosEmpty && (
@@ -20,6 +21,7 @@ export default function Home({ v }: Props) {
             {v.heliosEmpty && (
               <>
                 <div style={{"flex":"0 0 auto","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"flex-end","textAlign":"center","padding":"clamp(4px,1.2vh,14px) 8px clamp(20px,3.2vh,34px)"}}>
+                  <div style={{"width":"100%","marginBottom":"clamp(18px,3vh,34px)"}}><HomeKpis /></div>
                   <button className="ixf" onClick={v.goApprovals} style={{"display":"inline-flex","alignItems":"center","gap":"9px","height":"30px","padding":"0 6px 0 11px","border":"1px solid var(--border)","borderRadius":"var(--r-ctl,11px)","background":"var(--surface-faint)","backdropFilter":"blur(18px) saturate(1.25)","fontFamily":"var(--mono)","fontSize":"9px","letterSpacing":"0.16em","color":"var(--dim)","cursor":"pointer","transition":"border-color .2s var(--ease),color .2s var(--ease),background .2s var(--ease)"}}>
                     <span style={{"width":"5px","height":"5px","flex":"none","borderRadius":"2px","background":"var(--accent)","boxShadow":"0 0 8px var(--accent)","animation":"breathe 2.8s ease-in-out infinite"}} />
                     <span style={{"minWidth":"0","whiteSpace":"nowrap","overflow":"hidden","textOverflow":"ellipsis"}}>
@@ -54,7 +56,7 @@ export default function Home({ v }: Props) {
                   <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--faint)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{"flex":"none","marginBottom":"9px"}}>
                     <path d="M21.4 11.05 12.25 20.2a5 5 0 0 1-7.07-7.07l8.49-8.49a3.5 3.5 0 0 1 4.95 4.95l-8.49 8.49a2 2 0 0 1-2.83-2.83l7.78-7.78" />
                   </svg>
-                  <textarea value={v.draft ?? ""} onChange={v.setDraft} onKeyDown={v.onDraftKey} rows={1} placeholder="Ask Pulse anything…" style={{"flex":"1","minWidth":"0","border":"0","outline":"0","resize":"none","background":"none","fontSize":"15px","lineHeight":"1.55","padding":"7px 0","maxHeight":"120px","overflowY":"hidden","scrollbarWidth":"none","textOverflow":"ellipsis"}} />
+                  <textarea value={v.draft ?? ""} onChange={v.setDraft} onKeyDown={v.onDraftKey} rows={1} placeholder="Ask about any office, carer, candidate, visit or HSE package…" style={{"flex":"1","minWidth":"0","border":"0","outline":"0","resize":"none","background":"none","fontSize":"15px","lineHeight":"1.55","padding":"7px 0","maxHeight":"120px","overflowY":"hidden","scrollbarWidth":"none","textOverflow":"ellipsis"}} />
                   <button className={cx("ixj", "ixk")} onClick={v.send} style={{"flex":"none","width":"34px","height":"34px","border":"0","borderRadius":"var(--cta-r,12px)","background":"var(--accent-fill,var(--accent))","color":"var(--on-accent)","boxShadow":"var(--accent-glow,none)","cursor":"pointer","display":"flex","alignItems":"center","justifyContent":"center","transition":"transform .2s var(--ease),box-shadow .24s var(--ease),background .2s var(--ease)"}}>
                     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M12 19V5 M5 12l7-7 7 7" />
@@ -87,6 +89,9 @@ export default function Home({ v }: Props) {
                 )}
               </div>
             </div>
+            {v.heliosEmpty && <HomeQueries ask={v.askQuery} />}
+            {v.heliosEmpty && <HomeOffices />}
+            {v.heliosEmpty && v.homeNarrow && <div style={{"display":"flex","flexDirection":"column","gap":"12px","marginTop":"18px"}}><HomeRail /></div>}
           </div>
           {v.heliosEmpty && (
             <>

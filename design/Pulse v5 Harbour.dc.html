@@ -289,7 +289,7 @@ nav{scrollbar-width:none}
 <span style="{{ railThumbStyle }}"></span>
 <div style="{{ railRowStyle }}margin-bottom:22px">
 <button onClick="{{ toggleRail }}" title="{{ railLabel }}" style="width:36px;height:36px;flex:none;border:0;border-radius:var(--cta-r,11px);background:var(--accent-fill,var(--accent));color:var(--on-accent);box-shadow:var(--accent-glow,none);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;padding:0;transition:transform .2s var(--ease)" style-hover="transform:scale(1.07)" style-active="transform:scale(.94)">K</button>
-<span style="{{ brandStyle }}"><span style="display:block;font-size:15px;font-weight:600;letter-spacing:-.3px;color:var(--ink)">Kilbride Group</span><span style="display:block;margin-top:2px;font-size:9px;font-weight:500;letter-spacing:.16em;color:var(--accent)">PULSE · OPERATIONS</span></span>
+<span style="{{ brandStyle }}"><span style="display:block;font-size:15px;font-weight:600;letter-spacing:-.3px;color:var(--ink)">Westcare Homecare</span><span style="display:block;margin-top:2px;font-size:9px;font-weight:500;letter-spacing:.16em;color:var(--accent)">PULSE · OPERATIONS</span></span>
 <sc-if value="{{ railOpen }}" hint-placeholder-val="{{ false }}">
 <button onClick="{{ toggleRail }}" title="{{ railLabel }}" style="width:28px;height:28px;flex:none;border:0;border-radius:var(--r-ctl,10px);background:none;color:var(--mid);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s var(--ease),color .2s var(--ease)" style-hover="background:var(--track);color:var(--ink)">
 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16 M4 12h10 M4 18h16"/></svg></button>
@@ -324,8 +324,8 @@ nav{scrollbar-width:none}
 <div style="display:flex;align-items:center;gap:11px;margin-top:12px">
 <div style="width:40px;height:40px;flex:none;border-radius:999px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600">MK</div>
 <div style="min-width:0">
-<div style="font-size:17px;font-weight:600;letter-spacing:-.3px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Martin Kilbride</div>
-<div style="font-size:12.5px;color:var(--faint);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Kilbride Group · Owner</div>
+<div style="font-size:17px;font-weight:600;letter-spacing:-.3px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Martin Murphy</div>
+<div style="font-size:12.5px;color:var(--faint);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Westcare Homecare · Owner</div>
 </div>
 </div>
 <button onClick="{{ goSettings }}" onPointerEnter="{{ setBtnIn }}" onPointerLeave="{{ setBtnOut }}" style="position:relative;width:100%;height:46px;margin-top:16px;display:flex;align-items:center;gap:10px;padding:0 5px 0 16px;background:var(--surface-2);border:1px solid var(--border);border-radius:999px;color:var(--ink);font-size:14px;font-weight:600;letter-spacing:-.1px;cursor:pointer;overflow:hidden;isolation:isolate;box-shadow:0 1px 0 rgba(255,255,255,.05) inset,0 2px 8px rgba(0,0,0,.18);transition:border-color .4s var(--ease)" style-active="transform:scale(.985)">
@@ -351,7 +351,7 @@ nav{scrollbar-width:none}
 </button>
 <div style="{{ railRowStyle }}margin-top:10px;padding:12px 10px;border-top:1px solid var(--border)">
 <div style="width:40px;height:40px;flex:none;border-radius:12px;background:var(--surface-2);border:1px solid var(--border);color:var(--body);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;cursor:pointer">MK</div>
-<span style="{{ brandStyle }}"><span style="display:block;font-size:14px;font-weight:500;color:var(--ink)">Martin Kilbride</span><span style="display:block;margin-top:2px;font-size:12px;color:var(--faint)">Kilbride Group · Owner</span></span>
+<span style="{{ brandStyle }}"><span style="display:block;font-size:14px;font-weight:500;color:var(--ink)">Martin Murphy</span><span style="display:block;margin-top:2px;font-size:12px;color:var(--faint)">Westcare Homecare · Owner</span></span>
 </div>
 </sc-if>
 </nav>
@@ -442,7 +442,7 @@ nav{scrollbar-width:none}
 </div>
 <sc-if value="{{ showProfileText }}" hint-placeholder-val="{{ true }}">
 <div style="min-width:0">
-<div style="font-size:12px;font-weight:500;line-height:1.2;white-space:nowrap">Martin Kilbride</div>
+<div style="font-size:12px;font-weight:500;line-height:1.2;white-space:nowrap">Martin Murphy</div>
 <div style="font-size:10.5px;color:var(--faint);line-height:1.2">Owner</div>
 </div>
 </sc-if>
@@ -3618,10 +3618,10 @@ const REC_SECTIONS = [
 ];
 
 const CONTACTS = [
-  ["Aoife Nolan","Accounts manager","aoife@kilbridegroup.ie","Kilbride Group","staff","var(--accent)"],
-  ["Séamus Byrne","Senior installer","seamus@kilbridegroup.ie","Kilbride Group","staff","#9fd6f0"],
-  ["Tom Walsh","Operations lead","tom@kilbridegroup.ie","Kilbride Group","staff","#e6c78a"],
-  ["Niamh Cronin","Trade counter","niamh@kilbridegroup.ie","Kilbride Group","staff","#c8b4f0"],
+  ["Aoife Nolan","Accounts manager","aoife@demo.westcare","Westcare Homecare","staff","var(--accent)"],
+  ["Séamus Byrne","Senior installer","seamus@demo.westcare","Westcare Homecare","staff","#9fd6f0"],
+  ["Tom Walsh","Operations lead","tom@demo.westcare","Westcare Homecare","staff","#e6c78a"],
+  ["Niamh Cronin","Trade counter","niamh@demo.westcare","Westcare Homecare","staff","#c8b4f0"],
   ["Dermot Casey","Buyer","dermot@caseybuilders.ie","Casey Builders","customer","#9fd6f0"],
   ["Liam Dunne","Owner","liam@dunneandsons.ie","Dunne & Sons Ltd","on stop","#e2a08c"],
   ["Máire Fitzgerald","Director","maire@fitzheating.ie","Fitzgerald Heating","watch","#e6c78a"],
@@ -3729,10 +3729,10 @@ const REC_TEMPLATE_CATS = ["All","Records","Case work","Finance","Notes","Ops"];
 /* ---- admin hub ---- */
 /* ---- admin hub: 13 settings areas in five groups ---- */
 const PEOPLE = [
-  ["Aoife Nolan","Accounts manager","aoife@kilbridegroup.ie","Head office","active","Admin","2 min ago"],
-  ["Séamus Byrne","Senior installer","seamus@kilbridegroup.ie","Ballincollig","active","Standard","1 h ago"],
-  ["Tom Walsh","Operations lead","tom@kilbridegroup.ie","Head office","active","Manager","34 min ago"],
-  ["Niamh Cronin","Trade counter","niamh@kilbridegroup.ie","Ballincollig","active","Standard","3 h ago"],
+  ["Aoife Nolan","Accounts manager","aoife@demo.westcare","Head office","active","Admin","2 min ago"],
+  ["Séamus Byrne","Senior installer","seamus@demo.westcare","Ballincollig","active","Standard","1 h ago"],
+  ["Tom Walsh","Operations lead","tom@demo.westcare","Head office","active","Manager","34 min ago"],
+  ["Niamh Cronin","Trade counter","niamh@demo.westcare","Ballincollig","active","Standard","3 h ago"],
   ["Dermot Casey","Buyer · Casey Builders","dermot@caseybuilders.ie","—","external","External","2 days ago"],
   ["Liam Dunne","Owner · Dunne & Sons","liam@dunneandsons.ie","—","inactive","External","19 days ago"]
 ];
@@ -3876,7 +3876,7 @@ const ADMIN_CARDS = [
    blurb:"Who reports to whom, where they work and when.",
    tags:["3 locations","Europe/Dublin","EUR"],
    listLabel:"WHAT YOU CONTROL HERE",
-   rows:[["Company details","Kilbride Group"],["Departments","5"],["Teams","6"],["Locations","3"],
+   rows:[["Company details","Westcare Homecare"],["Departments","5"],["Teams","6"],["Locations","3"],
      ["Reporting lines","4"],["Working hours","08:00–17:30, Mon–Fri"],["Holidays","Irish public holidays"],
      ["Default currency and timezone","EUR · Europe/Dublin"]]},
 
@@ -3967,7 +3967,7 @@ const ADMIN_CARDS = [
    blurb:"Logo, accent colour, templates and how agents appear.",
    tags:["Lime accent","2 templates"],
    listLabel:"WHAT YOU CONTROL HERE",
-   rows:[["Company logo","kilbride-mark.svg"],["Pulse accent colour","oklch(0.86 0.19 118)"],
+   rows:[["Company logo","westcare-logohead.svg"],["Pulse accent colour","oklch(0.86 0.19 118)"],
      ["Email templates","3"],["Document templates","2"],["Agent appearance","12 faces · 6 shells"],
      ["Customer-facing portal branding","on", true]]},
   {id:"appearance", group:"EXPERIENCE", title:"Appearance & themes", icon:"brand", tint:"#6ad0f0",
@@ -4004,7 +4004,7 @@ const DATA_EVENTS = [
 const PEOPLE_EVENTS = [
   ["Aoife approved a refund","€412 written off on INV-10233 after the parts dispute closed.","Aoife Nolan","Glanmire Mechanical","Pulse","completed"],
   ["Tom changed a booking","Thursday's depot visit moved to 11:00 to fit the delivery window.","Tom Walsh","Ballincollig depot","Pulse","completed"],
-  ["Mac assigned a task","Lease decision handed to himself, due Thursday.","Martin Kilbride","Ballincollig depot","Pulse","completed"],
+  ["Mac assigned a task","Lease decision handed to himself, due Thursday.","Martin Murphy","Ballincollig depot","Pulse","completed"],
   ["Finance uploaded a report","August month-end close workbook, nine sheets.","Aoife Nolan","Head office","Pulse","completed"],
   ["Niamh edited customer details","Billing email corrected so reminders stop bouncing.","Niamh Cronin","Dunne & Sons Ltd","Pulse","completed"],
   ["Séamus completed a visit","Warranty callback closed — parts ordered on the spot.","Séamus Byrne","Fitzgerald Heating","Pulse","completed"],
@@ -4020,7 +4020,7 @@ const AI_EVENTS = [
   ["Agent paused for approval","Chase email to Dunne & Sons drafted — needs your yes before it sends.","Finance Agent","Dunne & Sons Ltd","Agent","awaiting"],
   ["Workflow failed","Certificate renewal reminder could not find a contact for Mallow yard.","Operations","Mallow yard","Agent","failed"],
   ["Stock Watch raised order lines","Two lines below reorder point before Thursday's jobs.","Stock Watch","Munster Plumbing","Agent","working"],
-  ["Briefing Agent posted the morning brief","Two items needed you; the rest was noise.","Briefing Agent","Martin Kilbride","WhatsApp","completed"]
+  ["Briefing Agent posted the morning brief","Two items needed you; the rest was noise.","Briefing Agent","Martin Murphy","WhatsApp","completed"]
 ];
 
 const STREAM_DEFS = [
@@ -4049,7 +4049,7 @@ const ITEMS = {
     detail:"Both lines are below reorder point and committed to Thursday's jobs. Pricing matches the June supplier agreement. Approving writes the decision as you and fires core.approval.updated.",
     actionLabel:"Approve", secondaryLabel:"Request changes", group:"Approvals",
     fields:[{k:"Provider",v:"core.approvals"},{k:"Requested by",v:"Aoife Nolan"},{k:"Value",v:"€14,280"},{k:"Record",v:"PO-4471"}],
-    history:[{when:"Today 08:54",text:"Aoife Nolan raised the request"},{when:"Today 08:54",text:"Routed to Martin Kilbride — over threshold"}]},
+    history:[{when:"Today 08:54",text:"Aoife Nolan raised the request"},{when:"Today 08:54",text:"Routed to Martin Murphy — over threshold"}]},
   sync:{kind:"Alert", importance:"critical", icon:ICONS.health, age:"6h",
     title:"Xero sync failed — expired token",
     why:"148 invoices have been queued since 02:14. Reconnecting posts them automatically.",
@@ -4076,7 +4076,7 @@ const ITEMS = {
     why:"No decision recorded against the contract and the notice period is 30 days.",
     detail:"The lease runs to 31 October. Ballincollig carried 38% of counter revenue this year; rent is 4.1% of that.",
     actionLabel:"Open record", secondaryLabel:"Assign", group:"Work",
-    fields:[{k:"Provider",v:"core.tasks"},{k:"Due",v:"Thu 27 Aug"},{k:"Assignee",v:"Martin Kilbride"},{k:"Priority",v:"high"}],
+    fields:[{k:"Provider",v:"core.tasks"},{k:"Due",v:"Thu 27 Aug"},{k:"Assignee",v:"Martin Murphy"},{k:"Priority",v:"high"}],
     history:[{when:"18 Aug",text:"Task materialised from a recurring rule"},{when:"2 Feb",text:"Contract uploaded by Aoife Nolan"}]}
 };
 const ORDER = ["sync","po","visit","auto","task"];
@@ -4197,7 +4197,7 @@ const TEAMS = [
   ["Accounts","3 members","Aoife Nolan","core:approval:decide"],
   ["Installers","9 members","Séamus Byrne","core:task:update"],
   ["Trade counter","6 members","Niamh Cronin","core:person:view"],
-  ["Management","2 members","Martin Kilbride","all core permissions"]
+  ["Management","2 members","Martin Murphy","all core permissions"]
 ];
 const LOCATIONS = [
   ["Head office","Little Island, Cork","14 staff","active"],
@@ -6670,7 +6670,7 @@ class Component extends DCLogic {
     };
 
     const adminModel = {
-      company: "Kilbride Group",
+      company: "Westcare Homecare",
       urgent: [
         ["3", "employees awaiting access", AMBER, "var(--warn-soft)", "people"],
         ["1", "integration disconnected", RED, "var(--bad-soft)", "integrations"],
@@ -7216,7 +7216,7 @@ class Component extends DCLogic {
 
     const APPROVALS = [
       {id:"a1", title:"Purchase order PO-4471 — €14,280", subject:"Munster Plumbing Supplies · raised by Aoife Nolan", age:"18m", status:"awaiting you",
-       steps:[{who:"Aoife Nolan",state:"raised 08:54",dot:GREEN},{who:"Martin Kilbride",state:"pending",dot:AMBER}],
+       steps:[{who:"Aoife Nolan",state:"raised 08:54",dot:GREEN},{who:"Martin Murphy",state:"pending",dot:AMBER}],
        work:{kind:"table", label:"PURCHASE ORDER", viewLabel:"View order",
          headline:"PO-4471 · Munster Plumbing Supplies", sub:"Delivery Thursday 18 Sep · terms 30 days",
          cols:["Line","Qty","Unit","Total"], align:["left","right","right","right"],
@@ -7232,7 +7232,7 @@ class Component extends DCLogic {
          tools:[["records.read","read"],["invoices.read","read"],["approvals.route","write"]],
          risk:"No alternative supplier quote on file. Last price change was 14 June."}},
       {id:"a2", title:"Credit limit increase — Casey Builders", subject:"€10,000 → €18,000 · raised by Niamh Cronin", age:"Yesterday", status:"awaiting you",
-       steps:[{who:"Niamh Cronin",state:"raised 16:02",dot:GREEN},{who:"Aoife Nolan",state:"approved 16:40",dot:GREEN},{who:"Martin Kilbride",state:"pending",dot:AMBER}],
+       steps:[{who:"Niamh Cronin",state:"raised 16:02",dot:GREEN},{who:"Aoife Nolan",state:"approved 16:40",dot:GREEN},{who:"Martin Murphy",state:"pending",dot:AMBER}],
        work:{kind:"diff", label:"RECORD CHANGE", viewLabel:"View change",
          headline:"Casey Builders Ltd · account CB-0142", sub:"Three fields change on approval, one unchanged",
          diff:[["Credit limit","€10,000","€18,000"],["Terms","30 days","45 days"],["Risk band","B","B"],["Reviewed","14 Mar 2026","Today"]],
@@ -7243,7 +7243,7 @@ class Component extends DCLogic {
          tools:[["records.read","read"],["invoices.read","read"],["records.update","write"]],
          risk:"One late payment in February, 19 days over. Cleared in full."}},
       {id:"a4", title:"Proposal — Ballincollig retrofit €62,400", subject:"Drafted by Helios · raised by Niamh Cronin", age:"3h", status:"awaiting you",
-       steps:[{who:"Niamh Cronin",state:"raised 06:10",dot:GREEN},{who:"Martin Kilbride",state:"pending",dot:AMBER}],
+       steps:[{who:"Niamh Cronin",state:"raised 06:10",dot:GREEN},{who:"Martin Murphy",state:"pending",dot:AMBER}],
        work:{kind:"doc", label:"PROPOSAL · 4 PAGES", viewLabel:"Read proposal",
          headline:"Heating retrofit — Ballincollig depot", sub:"Prepared for Casey Builders Ltd · valid 30 days",
          doc:[["Scope","Replace the depot's two oil boilers with a cascaded air-source system, re-balance the existing circuit and fit weather compensation controls. Work is phased over two weekends so the yard keeps running."],
@@ -7258,7 +7258,7 @@ class Component extends DCLogic {
          tools:[["records.read","read"],["files.read","read"],["email.send","external"]],
          risk:"No asbestos survey allowance. If the plant room needs one, add roughly €1,200."}},
       {id:"a5", title:"Payment run — 14 suppliers €48,920", subject:"Scheduled by Cash Watch · Friday 19 Sep", age:"1h", status:"awaiting you",
-       steps:[{who:"Cash Watch",state:"proposed 09:40",dot:GREEN},{who:"Martin Kilbride",state:"pending",dot:AMBER}],
+       steps:[{who:"Cash Watch",state:"proposed 09:40",dot:GREEN},{who:"Martin Murphy",state:"pending",dot:AMBER}],
        work:{kind:"table", label:"PAYMENT RUN", viewLabel:"View run",
          headline:"Run PR-0238 · 14 payments", sub:"Leaves the AIB current account on Friday 19 Sep",
          cols:["Supplier","Due","Invoices","Amount"], align:["left","left","right","right"],
@@ -7275,7 +7275,7 @@ class Component extends DCLogic {
          tools:[["invoices.read","read"],["payments.read","read"],["bank.payment.create","external"]],
          risk:"Two invoices held back total €2,410. They will age past 60 days if not paid next run."}},
       {id:"a3", title:"Write-off — INV-10233 €412", subject:"Glanmire Mechanical · raised by Aoife Nolan", age:"2 days", status:"approved",
-       steps:[{who:"Aoife Nolan",state:"raised",dot:GREEN},{who:"Martin Kilbride",state:"approved",dot:GREEN}],
+       steps:[{who:"Aoife Nolan",state:"raised",dot:GREEN},{who:"Martin Murphy",state:"approved",dot:GREEN}],
        work:{kind:"diff", label:"WRITE-OFF", viewLabel:"View write-off",
          headline:"INV-10233 · Glanmire Mechanical", sub:"Two fields change on approval",
          diff:[["Status","Past due 94 days","Written off"],["Balance","€412.00","€0.00"]],
@@ -7286,7 +7286,7 @@ class Component extends DCLogic {
          risk:"None. The counterparty no longer exists."}}
     ];
     const bucketOf = (a) => a.status === "approved" ? "Decided"
-      : a.steps.some(s => s.state === "pending" && s.who === "Martin Kilbride") ? "Awaiting you" : "Awaiting others";
+      : a.steps.some(s => s.state === "pending" && s.who === "Martin Murphy") ? "Awaiting you" : "Awaiting others";
     const APPROVAL_COUNTS = {"Awaiting you":0, "Awaiting others":0, "Decided":0};
     APPROVALS.filter(a => !st.approved[a.id]).forEach(a => { APPROVAL_COUNTS[bucketOf(a)] += 1; });
     const approvalView = st.workViews.approvals || "Awaiting you";
@@ -7903,7 +7903,7 @@ class Component extends DCLogic {
 
       /* dashboard */
       isDashboard: page === "Dashboard",
-      dashTitle: "Kilbride Group · " + areaLabel,
+      dashTitle: "Westcare Homecare · " + areaLabel,
       kpiEdit: st.kpiEdit,
       toggleKpiEdit: () => this.setState(prev => ({kpiEdit: !prev.kpiEdit})),
       kpiEditLabel: st.kpiEdit ? "Done" : "Edit KPIs",
@@ -8930,8 +8930,8 @@ class Component extends DCLogic {
       })),
       notifGroups: [["EARLIER TODAY", 0]],
       deployment: [
-        {k:"Client", v:"kilbride", font:MONO},
-        {k:"App name", v:"Kilbride Group Operations", font:"inherit"},
+        {k:"Client", v:"westcare", font:MONO},
+        {k:"App name", v:"Westcare Homecare Operations", font:"inherit"},
         {k:"Accent", v:"oklch(0.86 0.19 118)", font:MONO},
         {k:"Terminology", v:"organisation → Merchant", font:"inherit"},
         {k:"Locale", v:"EUR · Europe/Dublin", font:"inherit"},

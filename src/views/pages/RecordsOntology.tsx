@@ -16,7 +16,7 @@ export default function RecordsOntology({ v }: Props) {
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--faint)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{"flex":"none"}}>
                 <path d="M21.4 11.05 12.25 20.2a5 5 0 0 1-7.07-7.07l8.49-8.49a3.5 3.5 0 0 1 4.95 4.95l-8.49 8.49a2 2 0 0 1-2.83-2.83l7.78-7.78" />
               </svg>
-              <input value={v.onto?.query ?? ""} onChange={v.onto?.setQuery} onKeyDown={v.onto?.onKey} placeholder="e.g. invoices, approvals" style={{"flex":"1","minWidth":"0","border":"0","outline":"0","background":"none","fontSize":"12.5px","color":"var(--ink)"}} />
+              <input value={v.onto?.query ?? ""} onChange={v.onto?.setQuery} onKeyDown={v.onto?.onKey} placeholder="e.g. carers, visits, compliance" style={{"flex":"1","minWidth":"0","border":"0","outline":"0","background":"none","fontSize":"12.5px","color":"var(--ink)"}} />
               {v.onto?.hasQuery && (
                 <>
                   <button onClick={v.onto?.clear} aria-label="Clear" style={{"flex":"none","width":"18px","height":"18px","border":"0","borderRadius":"6px","background":"var(--chip)","color":"var(--dim)","cursor":"pointer","display":"flex","alignItems":"center","justifyContent":"center"}}>

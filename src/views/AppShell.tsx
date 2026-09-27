@@ -1,7 +1,6 @@
 import { Fragment } from "react";
 import { arr, cat, css, cx, txt } from "../runtime/template";
 import AgentFace from "../components/AgentFace";
-import DashboardKpiBand from "./pages/DashboardKpiBand";
 import Home from "./pages/Home";
 import Work from "./pages/Work";
 import Records from "./pages/Records";
@@ -9,7 +8,6 @@ import RecordsFiles from "./pages/RecordsFiles";
 import RecordsOntology from "./pages/RecordsOntology";
 import Activity from "./pages/Activity";
 import Settings from "./pages/Settings";
-import Dashboard from "./pages/Dashboard";
 import Agents from "./pages/Agents";
 import HeliosMini from "./overlays/HeliosMini";
 import WorkViewer from "./overlays/WorkViewer";
@@ -17,6 +15,14 @@ import AgentStudio from "./overlays/AgentStudio";
 import NewRecordDialog from "./overlays/NewRecordDialog";
 import CommandPalette from "./overlays/CommandPalette";
 import BackgroundGallery from "./overlays/BackgroundGallery";
+import Recruitment from "../westcare/pages/Recruitment";
+import Compliance from "../westcare/pages/Compliance";
+import Rostering from "../westcare/pages/Rostering";
+import CareDelivery from "../westcare/pages/CareDelivery";
+import BillingPayroll from "../westcare/pages/BillingPayroll";
+import WcDashboard from "../westcare/pages/WcDashboard";
+import EntityDrawer from "../westcare/EntityDrawer";
+import OntologyChains from "../westcare/OntologyChains";
 
 type Props = { v: any };
 
@@ -31,14 +37,14 @@ export default function AppShell({ v }: Props) {
         <span style={css(v.railThumbStyle)} />
         <div style={css(cat(v.railRowStyle, "margin-bottom:22px"))}>
           <button className={cx("ix0", "ix1")} onClick={v.toggleRail} title={v.railLabel} style={{"width":"36px","height":"36px","flex":"none","border":"0","borderRadius":"var(--cta-r,11px)","background":"var(--accent-fill,var(--accent))","color":"var(--on-accent)","boxShadow":"var(--accent-glow,none)","cursor":"pointer","display":"flex","alignItems":"center","justifyContent":"center","fontSize":"13px","fontWeight":"600","padding":"0","transition":"transform .2s var(--ease)"}}>
-            {"K"}
+            {"W"}
           </button>
           <span style={css(v.brandStyle)}>
             <span style={{"display":"block","fontSize":"15px","fontWeight":"600","letterSpacing":"-.3px","color":"var(--ink)"}}>
-              {"Kilbride Group"}
+              {"Westcare"}
             </span>
             <span style={{"display":"block","marginTop":"2px","fontSize":"9px","fontWeight":"500","letterSpacing":".16em","color":"var(--accent)"}}>
-              {"PULSE · OPERATIONS"}
+              {"HOMECARE · PULSE"}
             </span>
           </span>
           {v.railOpen && (
@@ -95,14 +101,14 @@ export default function AppShell({ v }: Props) {
               </div>
               <div style={{"display":"flex","alignItems":"center","gap":"11px","marginTop":"12px"}}>
                 <div style={{"width":"40px","height":"40px","flex":"none","borderRadius":"999px","background":"var(--accent-soft)","color":"var(--accent)","display":"flex","alignItems":"center","justifyContent":"center","fontSize":"13px","fontWeight":"600"}}>
-                  {"MK"}
+                  {"MM"}
                 </div>
                 <div style={{"minWidth":"0"}}>
                   <div style={{"fontSize":"17px","fontWeight":"600","letterSpacing":"-.3px","color":"var(--ink)","whiteSpace":"nowrap","overflow":"hidden","textOverflow":"ellipsis"}}>
-                    {"Martin Kilbride"}
+                    {"Martin Murphy"}
                   </div>
                   <div style={{"fontSize":"12.5px","color":"var(--faint)","marginTop":"2px","whiteSpace":"nowrap","overflow":"hidden","textOverflow":"ellipsis"}}>
-                    {"Kilbride Group · Owner"}
+                    {"Westcare Homecare · Leadership"}
                   </div>
                 </div>
               </div>
@@ -142,14 +148,14 @@ export default function AppShell({ v }: Props) {
             </button>
             <div style={css(cat(v.railRowStyle, "margin-top:10px;padding:12px 10px;border-top:1px solid var(--border)"))}>
               <div style={{"width":"40px","height":"40px","flex":"none","borderRadius":"12px","background":"var(--surface-2)","border":"1px solid var(--border)","color":"var(--body)","display":"flex","alignItems":"center","justifyContent":"center","fontSize":"12px","fontWeight":"600","cursor":"pointer"}}>
-                {"MK"}
+                {"MM"}
               </div>
               <span style={css(v.brandStyle)}>
                 <span style={{"display":"block","fontSize":"14px","fontWeight":"500","color":"var(--ink)"}}>
-                  {"Martin Kilbride"}
+                  {"Martin Murphy"}
                 </span>
                 <span style={{"display":"block","marginTop":"2px","fontSize":"12px","color":"var(--faint)"}}>
-                  {"Kilbride Group · Owner"}
+                  {"Westcare Homecare · Leadership"}
                 </span>
               </span>
             </div>
@@ -310,10 +316,10 @@ export default function AppShell({ v }: Props) {
                         <>
                           <div style={{"minWidth":"0"}}>
                             <div style={{"fontSize":"12px","fontWeight":"500","lineHeight":"1.2","whiteSpace":"nowrap"}}>
-                              {"Martin Kilbride"}
+                              {"Martin Murphy"}
                             </div>
                             <div style={{"fontSize":"10.5px","color":"var(--faint)","lineHeight":"1.2"}}>
-                              {"Owner"}
+                              {"Leadership"}
                             </div>
                           </div>
                         </>
@@ -385,7 +391,6 @@ export default function AppShell({ v }: Props) {
             </div>
           </>
         )}
-        {v.isDashboard && <DashboardKpiBand v={v} />}
         <div data-scroll-main="1" style={{"flex":"1","minHeight":"0","overflowY":"auto","overflowX":"hidden","scrollbarWidth":"none"}}>
           {v.isChat && <Home v={v} />}
           {v.isWork && <Work v={v} />}
@@ -469,7 +474,7 @@ export default function AppShell({ v }: Props) {
             </>
           )}
           {v.rec?.isFiles && <RecordsFiles v={v} />}
-          {v.rec?.isOntology && <RecordsOntology v={v} />}
+          {v.rec?.isOntology && <div style={{"padding":"0 22px 26px"}}><OntologyChains /><RecordsOntology v={v} /></div>}
           {v.isActivity && <Activity v={v} />}
           {v.act?.detailOpen && (
             <>
@@ -575,7 +580,12 @@ export default function AppShell({ v }: Props) {
             </>
           )}
           {v.isSettings && <Settings v={v} />}
-          {v.isDashboard && <Dashboard v={v} />}
+          {v.isDashboard && <WcDashboard />}
+          {v.wcPage === "Recruitment" && <Recruitment />}
+          {v.wcPage === "Compliance" && <Compliance />}
+          {v.wcPage === "Rostering" && <Rostering />}
+          {v.wcPage === "Care Delivery" && <CareDelivery />}
+          {v.wcPage === "Billing & Payroll" && <BillingPayroll />}
           {v.isAgents && <Agents v={v} />}
         </div>
       </main>
@@ -816,6 +826,7 @@ export default function AppShell({ v }: Props) {
           </div>
         </>
       )}
+      <EntityDrawer />
       {v.newRec?.open && <NewRecordDialog v={v} />}
       {v.paletteOpen && <CommandPalette v={v} />}
       {v.bgGallery?.open && <BackgroundGallery v={v} />}

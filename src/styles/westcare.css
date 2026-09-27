@@ -1,0 +1,62 @@
+/* Westcare accent layer on top of Pulse Harbour.
+   Brand colours come from the live Westcare logo and site theme:
+   logo brown #583F35, site brown #594A42, cream #F1EAE0, sand #E8DCCC, paper #F4EEE6.
+   On the dark Pulse surface the cream carries the accent (the logo's own pairing:
+   cream on brown); in the light theme the brown carries it. */
+
+[data-theme="westcare"]{
+--ui:"Geist",system-ui,sans-serif;--mono:"Geist Mono","IBM Plex Mono",ui-monospace,monospace;--fig-weight:600;--card-r:20px;--cta-r:999px;--chip-r:999px;--panel:#121010;--r-ctl:999px;--r-md:14px;--r-sm:11px;
+--kpi-band:#141111;--kpi-card:#1a1615;--kpi-ink:#f4eee6;--kpi-dim:#a79d94;--kpi-up:#8fd6a0;--kpi-down:#ee6a5f;
+--rail-active:#221c1a;--rail-active-ink:#f1eae0;--rail-active-ring:inset 0 1px 0 rgba(255,255,255,.04),inset 0 0 0 1px rgba(232,220,204,.12);
+--bg:#0d0b0b;--rail:#100e0d;--surface:#171413;--surface-2:#1e1a18;
+--surface-strong:#1a1716;--overlay:rgba(23,20,19,.97);--tooltip:#262120;--tooltip-ink:#f4eee6;
+--border:rgba(244,238,230,.075);--border-strong:rgba(244,238,230,.16);--card-shadow:0 1px 0 rgba(255,255,255,.03) inset;
+--ink:#f4eee6;--body:#d6cdc4;--dim:#a79d94;--faint:#776d66;--mid:#8e847c;
+--accent:#e8dccc;--on-accent:#3d2c25;--on-accent-2:rgba(61,44,37,.7);--on-accent-strong:rgba(61,44,37,.88);--on-accent-soft:rgba(61,44,37,.2);
+--accent-hover:#f4eee6;--accent-soft:rgba(232,220,204,.13);--accent-faint:rgba(232,220,204,.055);--accent-line:rgba(232,220,204,.28);
+--accent-fill:linear-gradient(90deg,#e8dccc 0%,#f4eee6 100%);--accent-glow:0 0 22px rgba(232,220,204,.16);
+--ok:#8fd6a0;--ok-soft:rgba(143,214,160,.13);--warn:#eaa55a;--warn-soft:rgba(234,165,90,.15);--bad:#ee6a5f;--bad-soft:rgba(238,106,95,.14);--bad-on-accent:#5c1418;--bad-on-accent-ink:#4e1014;
+--info:#9fc3dc;--info-soft:rgba(159,195,220,.13);
+--neutral:rgba(244,238,230,.24);--track:#2a2422;--scrim:rgba(8,6,6,.62);
+--pill-bg:#e8dccc;--pill-ink:#3d2c25;--surface-faint:#131110;
+--glass-surface:#1a1716;--glass-surface-2:#201b19;--glass-border:rgba(255,255,255,.09);--glass-highlight:rgba(255,255,255,.05);--glass-shadow:rgba(0,0,0,.55);--glass-tint:rgba(232,220,204,.06);
+--flap:linear-gradient(178deg,#221d1b 0%,#1b1716 49%,#141110 51%,#1e1a18 100%);--flap-hinge:rgba(0,0,0,.6);--flap-notch:#0d0b0b;
+--glow-a:rgba(232,220,204,.05);--glow-b:rgba(89,74,66,.12);--grid:rgba(255,255,255,.02);--ease:cubic-bezier(.2,.8,.2,1);
+--bloom-a:rgba(232,220,204,.26);--bloom-b:rgba(89,74,66,.5);--bloom-c:rgba(159,195,220,.16);--hero-field:#171413;--records-card:#171413;--chip:#171413;--chip-border:rgba(255,255,255,.08);
+--hero-grad:linear-gradient(180deg,#0d0b0b 0%,#1d1613 22%,#3a2b24 46%,#594a42 64%,#2e231e 84%,#0e0c0b 100%)}
+[data-theme="westcare"] [data-kpi-band]{--on-accent:#f4eee6;--on-accent-2:#8e847c;--on-accent-strong:#d6cdc4;--on-accent-soft:rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.06)}
+
+[data-theme="westcare-light"]{
+--ui:"Geist",system-ui,sans-serif;--mono:"Geist Mono","IBM Plex Mono",ui-monospace,monospace;--card-r:20px;--cta-r:999px;--chip-r:999px;--r-ctl:999px;--r-md:14px;--r-sm:11px;
+--panel:#fbf8f4;--bg:#f1eae0;--rail:rgba(255,255,255,.5);--surface:rgba(255,255,255,.82);--surface-2:#ffffff;
+--surface-strong:#ffffff;--overlay:rgba(255,253,250,.96);--tooltip:#3d2c25;--tooltip-ink:#f4eee6;
+--border:rgba(89,74,66,.12);--border-strong:rgba(89,74,66,.26);--card-shadow:0 1px 2px rgba(89,74,66,.06);
+--ink:#2b211d;--body:#4a3d37;--dim:#76675f;--faint:#9a8b82;--mid:#85766e;
+--accent:#594a42;--on-accent:#f4eee6;--on-accent-2:rgba(244,238,230,.8);--on-accent-strong:rgba(244,238,230,.92);--on-accent-soft:rgba(244,238,230,.3);
+--accent-hover:#583f35;--accent-soft:rgba(89,74,66,.1);--accent-faint:rgba(89,74,66,.05);--accent-line:rgba(89,74,66,.3);
+--rail-active:rgba(89,74,66,.08);--rail-active-ink:#583f35;
+--ok:#1f7a4a;--ok-soft:rgba(31,122,74,.11);--warn:#9a5a12;--warn-soft:rgba(154,90,18,.12);--bad:#b3261e;--bad-soft:rgba(179,38,30,.1);--bad-on-accent:#ffd9d4;--bad-on-accent-ink:#8c2118;
+--info:#2f6690;--info-soft:rgba(47,102,144,.1);
+--kpi-card:#ffffff;--kpi-ink:#2b211d;--kpi-dim:#76675f;--kpi-up:#1f7a4a;--kpi-down:#b3261e;
+--neutral:rgba(89,74,66,.28);--track:rgba(89,74,66,.1);--scrim:rgba(43,33,29,.28);
+--pill-bg:#594a42;--pill-ink:#f4eee6;--surface-faint:rgba(255,255,255,.5);
+--glass-surface:rgba(255,255,255,.6);--glass-surface-2:rgba(255,255,255,.75);--glass-border:rgba(255,255,255,.55);--glass-highlight:rgba(255,255,255,.7);--glass-shadow:rgba(60,40,30,.18);--glass-tint:rgba(89,74,66,.08);
+--flap:linear-gradient(178deg,#ffffff 0%,#f4eee6 49%,#ebe1d2 51%,#f8f4ef 100%);--flap-hinge:rgba(89,74,66,.16);--flap-notch:var(--bg);
+--glow-a:rgba(89,74,66,.06);--glow-b:rgba(89,74,66,.03);--grid:rgba(89,74,66,.05);--ease:cubic-bezier(.2,.8,.2,1);
+--bloom-a:rgba(89,74,66,.18);--bloom-b:rgba(232,220,204,.6);--bloom-c:rgba(159,195,220,.2);--hero-field:rgba(255,255,255,.97);--records-card:rgba(255,255,255,.96);--chip:rgba(255,255,255,.92);--chip-border:rgba(89,74,66,.14);
+--hero-grad:linear-gradient(180deg,#f4eee6 0%,#ebe1d2 22%,#d9c8b3 46%,#c2ab93 64%,#e3d6c6 84%,#f4eee6 100%)}
+[data-theme="westcare-light"] [data-kpi-band]{--on-accent:#2b211d;--on-accent-2:#76675f;--on-accent-strong:#4a3d37;--on-accent-soft:rgba(89,74,66,.08)}
+
+/* Interaction states for the Westcare modules. */
+.wc-link:hover{color:var(--accent) !important;border-bottom-color:var(--accent) !important}
+.wc-link:focus-visible,.wc-go:focus-visible,.wc-btn:focus-visible,.wc-seg:focus-visible,.wc-kpi:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wc-go:hover{color:var(--accent-hover) !important}
+.wc-btn:not(:disabled):hover{border-color:var(--border-strong) !important;filter:brightness(1.06)}
+.wc-btn:not(:disabled):active{transform:translateY(1px) scale(.98)}
+.wc-seg:hover{color:var(--ink) !important;background:var(--surface-2) !important}
+.wc-kpi:hover{border-color:var(--border-strong) !important;transform:translateY(-1px)}
+.wc-row:hover{background:var(--surface-2) !important}
+.wc-card:hover{border-color:var(--border-strong) !important}
+@media (max-width: 1100px){ .wc-grid{grid-template-columns:1fr 1fr !important} }
+@media (max-width: 760px){ .wc-grid{grid-template-columns:1fr !important} }
+@media (prefers-reduced-motion:reduce){ .wc-kpi:hover{transform:none} }

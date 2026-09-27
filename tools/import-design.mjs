@@ -317,7 +317,7 @@ for (const n of acorn.parse(data, { ecmaVersion: "latest" }).body) {
 }
 const used = names.filter(n => new RegExp("(?<![\\w$.])" + n.replace(/\$/g, "\\$") + "(?![\\w$])").test(cls));
 fs.writeFileSync(path.join(outDir, "logic", "data.js"),
-  "/* Demo data and pure helpers for the Pulse prototype (Kilbride Group). */\n\n" + data.trim() + "\n\nexport {\n  " + names.join(",\n  ") + "\n};\n");
+  "/* Demo data and pure helpers for the Pulse prototype (Westcare Homecare). */\n\n" + data.trim() + "\n\nexport {\n  " + names.join(",\n  ") + "\n};\n");
 fs.writeFileSync(path.join(outDir, "logic", "PulseLogic.js"),
   'import React from "react";\nimport { DCLogic } from "../runtime/logic";\nimport {\n  ' + used.join(",\n  ") + '\n} from "./data";\n\n'
   + "/* All state and behaviour for Pulse. renderVals() returns the flat object the views render from. */\n"
